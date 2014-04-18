@@ -1,7 +1,8 @@
 SampleApp::Application.routes.draw do
-  resources :users do
-    resources :orders
-  end
+  # resources :users do
+  #   resources :orders
+  # end
+  resources :users
   resources :orders
   resources :sessions, only: [:new, :create, :destroy] 
 

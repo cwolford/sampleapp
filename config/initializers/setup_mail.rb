@@ -3,7 +3,7 @@ require 'development_mail_interceptor.rb'
 ActionMailer::Base.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
-  :domain               => "student.andover.edu",
+  :domain               => "gmail.com",
   :user_name            => "techmasterswork",
   :password             => "happycrazy17-",
   :authentication       => "plain",

@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
 	def create
 	    @order = Order.new(order_params)
 	    if @order.save
-	    	User.all do |user|
+	    	User.all.each do |user|
 				UserMailer.work_order(@order, user).deliver
 			end
 			flash[:success] = "Work Order Form Completed!"

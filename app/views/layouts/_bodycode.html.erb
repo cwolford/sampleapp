@@ -6,8 +6,8 @@
 	<div id="leftside">
 		<p class="righty">quicklinks</p>
 		<div id="announcements">
-		    <li><a href= "users" >Users</a></li>
-            <li><a href= "orders/new">Create a Work Order</a></li>
+		    <li><%= link_to "Users", users_path %></li>
+		    <li><%= link_to "Create a Work Order", new_order_path %></li>
 			<% if signed_in? %>
             <li id="fat-menu" class="dropdown">
               <a href="users_path" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
@@ -20,7 +20,6 @@
             </li>
         <% else %>
             <li><%= link_to "Sign in", signin_path %></li>
-            <li><%= link_to "Create a Work Order", new_order_path %></li> 
         <% end %>
 
 		</div>
@@ -52,11 +51,8 @@
 		</div>
 	</div>
 	<div id="rightside">
-		<div id="rightcontent"
-		<% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-      	<% end %>
+		<div id="rightcontent">
       	<%= yield %>
 		</div>
-	</div>
-</div>
+	</div>	
+</div>	
