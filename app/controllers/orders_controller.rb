@@ -34,7 +34,7 @@ class OrdersController < ApplicationController
 	private
 
     def order_params
-    	params.require(:order).permit(:issue, :description, :time) if params[:order]
+    	params.require(:order).permit(:issue, :description, :time, :name, :email) if params[:order]
     end
 
 end
